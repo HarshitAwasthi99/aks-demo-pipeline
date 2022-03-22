@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: myimage990 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myimage990
+  template:
+    metadata:
+      labels:
+        app: myimage990 
+    spec:
+      containers:
+        - name: myimage990 
+          image: harshitacr999.azurecr.io/myimage990
+          ports:
+          - containerPort: 80
